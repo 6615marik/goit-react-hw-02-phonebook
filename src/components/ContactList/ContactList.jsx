@@ -9,7 +9,7 @@ export const ContactList = ({ contacts, onRemove, children }) => {
           <>
             {contacts.map(({ id, name, number }) => {
               return (
-                <li key={id}>
+                <li key={id} className={css.iteam}>
                   <p>
                     <span>{name} : </span>
                     {number}

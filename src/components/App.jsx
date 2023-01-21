@@ -46,7 +46,7 @@ export class App extends Component {
     const { filter } = this.state;
 
     return (
-      <>
+      <div className="main">
         <h1>Phonebook</h1>
         <ContactForm onAdd={this.handleAddContact} onCheck={this.handleCheck} />
         <h2>Contacts</h2>
@@ -56,7 +56,7 @@ export class App extends Component {
         >
           <Filter filter={filter} onChange={this.handleFilterChange} />
         </ContactList>
-      </>
+      </div>
     );
   }
 }
