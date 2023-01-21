@@ -47,7 +47,9 @@ export class App extends Component {
 
     return (
       <>
+        <h1>Phonebook</h1>
         <ContactForm onAdd={this.handleAddContact} onCheck={this.handleCheck} />
+        <h2>Contacts</h2>
         <ContactList
           contacts={this.visibleContacts()}
           onRemove={this.handleRemoveContact}

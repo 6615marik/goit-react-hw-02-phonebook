@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 export const ContactList = ({ contacts, onRemove, children }) => {
   return (
     <div className={css.card}>
-      <h2 className={css.title}>Contacts</h2>
       {children}
       <ul className={css.list}>
         {contacts.length === 0 ? null : (
@@ -21,7 +20,7 @@ export const ContactList = ({ contacts, onRemove, children }) => {
                       onRemove(id);
                     }}
                   >
-                    ⛌
+                    Delete
                   </button>
                 </li>
               );
