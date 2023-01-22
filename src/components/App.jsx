@@ -3,6 +3,8 @@ import { ContactForm } from './ContactForm/ContactForm';
 import { ContactList } from './ContactList/ContactList';
 import { Filter } from './Filter/Filter';
 
+import PropTypes from 'prop-types';
+
 export class App extends Component {
   state = {
     contacts: [
@@ -60,3 +62,12 @@ export class App extends Component {
     );
   }
 }
+App.proTypes = {
+  id: PropTypes.string.isRequired,
+  filter: PropTypes.string.isRequired,
+  visibleContacts: PropTypes.func.isRequired,
+  handleFilterChange: PropTypes.func.isRequired,
+  handleRemoveContact: PropTypes.func.isRequired,
+  handleCheck: PropTypes.func.isRequired,
+  handleAddContact: PropTypes.func.isRequired,
+};
