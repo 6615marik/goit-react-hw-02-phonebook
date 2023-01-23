@@ -63,11 +63,6 @@ export class App extends Component {
   }
 }
 App.proTypes = {
-  id: PropTypes.string.isRequired,
-  filter: PropTypes.string.isRequired,
-  visibleContacts: PropTypes.func.isRequired,
-  handleFilterChange: PropTypes.func.isRequired,
-  handleRemoveContact: PropTypes.func.isRequired,
-  handleCheck: PropTypes.func.isRequired,
-  handleAddContact: PropTypes.func.isRequired,
+  onCheck: PropTypes.func.isRequired,
+  onAdd: PropTypes.func.isRequired,
 };

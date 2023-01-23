@@ -32,7 +32,7 @@ export const ContactList = ({ contacts, onRemove, children }) => {
   );
 };
 ContactList.propTypes = {
-  id: PropTypes.string,
-  number: PropTypes.string,
-  name: PropTypes.string,
+  contact: PropTypes.objectOf(PropTypes.string),
+  onRemove: PropTypes.func,
+  children: PropTypes.node,
 };
