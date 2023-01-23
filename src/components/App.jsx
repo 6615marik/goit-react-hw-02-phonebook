@@ -3,8 +3,6 @@ import { ContactForm } from './ContactForm/ContactForm';
 import { ContactList } from './ContactList/ContactList';
 import { Filter } from './Filter/Filter';
 
-import PropTypes from 'prop-types';
-
 export class App extends Component {
   state = {
     contacts: [
@@ -35,7 +33,9 @@ export class App extends Component {
       contacts: contacts.filter(contact => contact.id !== id),
     }));
 
-  handleFilterChange = filter => this.setState({ filter });
+  handleFilterChange = e => {
+    this.setState({ filter: e.currentTarget.value });
+  };
 
   visibleContacts = () => {
     const { contacts, filter } = this.state;
@@ -62,7 +62,3 @@ export class App extends Component {
     );
   }
 }
-App.proTypes = {
-  onCheck: PropTypes.func.isRequired,
-  onAdd: PropTypes.func.isRequired,
-};

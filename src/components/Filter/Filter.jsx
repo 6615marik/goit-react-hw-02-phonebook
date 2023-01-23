@@ -8,12 +8,12 @@ export const Filter = ({ filter, onChange }) => {
       type="text"
       name="filter"
       value={filter}
-      onChange={({ target }) => onChange(target.value)}
+      onChange={onChange}
       placeholder="Search"
     />
   );
 };
 Filter.propTypes = {
-  filter: PropTypes.func.isRequired,
+  filter: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };

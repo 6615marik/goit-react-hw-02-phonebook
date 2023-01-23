@@ -90,9 +90,4 @@ export class ContactForm extends Component {
 ContactForm.proTypes = {
   number: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  handleChangeForm: PropTypes.func.isRequired,
-  validateForm:PropTypes.func.isRequired,
-  handleFormSubmit:PropTypes.func.isRequired,
-  resetForm:PropTypes.func.isRequired,
-
 };
