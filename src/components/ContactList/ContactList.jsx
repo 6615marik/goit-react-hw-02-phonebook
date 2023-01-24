@@ -32,7 +32,13 @@ export const ContactList = ({ contacts, onRemove, children }) => {
   );
 };
 ContactList.propTypes = {
-  contact: PropTypes.arrayOf(PropTypes.string),
-  onRemove: PropTypes.func,
+  contact: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    }).isRequired
+  ),
+  onRemove: PropTypes.func.isRequired,
   children: PropTypes.node,
 };
